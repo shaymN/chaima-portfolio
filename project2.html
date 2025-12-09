@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project 2 – Router Web UI Testing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="experience.html">Experience</a>
+  <a href="projects.html">Projects</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="section">
+  <h2>Project 2 – Router Web UI & Configuration Flows</h2>
+
+  <h3>Context</h3>
+  <p>
+    I validated the router Web UI used by customers to configure their home network:
+    Wi-Fi, LAN, firewall, guest network, and parental control.
+  </p>
+
+  <h3>Main Areas Tested</h3>
+  <ul>
+    <li>Login & authentication (admin credentials, password change).</li>
+    <li>Wi-Fi setup: SSID, password, security mode, hide/visible network.</li>
+    <li>Guest Wi-Fi network and isolation from main LAN.</li>
+    <li>Device list and parental control rules.</li>
+    <li>Port forwarding, firewall, and remote access settings.</li>
+    <li>Diagnostics pages (ping, traceroute, logs).</li>
+  </ul>
+
+  <h3>Test Approach</h3>
+  <ul>
+    <li>Designed UI test cases covering all configuration flows and edge cases.</li>
+    <li>Tested across different browsers and devices (laptop, tablet, mobile).</li>
+    <li>Combined structured test cases with exploratory testing sessions.</li>
+    <li>Validated that UI feedback (success, error, warnings) is clear and helpful.</li>
+  </ul>
+
+  <h3>Example Test Scenarios</h3>
+  <ul>
+    <li>Change Wi-Fi password and verify that all devices must reconnect.</li>
+    <li>Create a guest Wi-Fi network and ensure it cannot reach main LAN devices.</li>
+    <li>Block a device using parental control and confirm traffic is denied.</li>
+    <li>Open a port with port forwarding and verify external access works as expected.</li>
+    <li>Use diagnostics tools (ping, traceroute) and confirm output correctness.</li>
+  </ul>
+
+  <h3>Defect Examples</h3>
+  <ul>
+    <li>UI showing “saved successfully” but settings not applied on the device.</li>
+    <li>Blocked devices still having internet access via guest network.</li>
+    <li>Incorrect error message when entering special characters in fields.</li>
+  </ul>
+
+  <h3>Outcome</h3>
+  <p>
+    This testing improved the consistency of the router UI, reduced customer confusion,
+    and helped ensure that what the user sees and configures actually matches the real
+    device behaviour.
+  </p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project 1 – Full CPE Firmware Validation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="experience.html">Experience</a>
+  <a href="projects.html">Projects</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="section">
+  <h2>Project 1 – Full CPE Firmware Validation (DOCSIS/GPON)</h2>
+
+  <h3>Context</h3>
+  <p>
+    As a CPE Test Analyst, I worked on validating new firmware releases for DOCSIS/GPON routers
+    used by large European ISPs. The goal was to ensure that real customer scenarios work reliably
+    after each firmware upgrade.
+  </p>
+
+  <h3>Scope & Focus Areas</h3>
+  <ul>
+    <li><b>Customer scenarios (main focus):</b> internet browsing, streaming, gaming, video calls, parental control, device blocking/allowing.</li>
+    <li><b>Wi-Fi behaviour:</b> 2.4/5 GHz, channel changes, throughput, roaming, stability over time.</li>
+    <li><b>Diagnostics & system:</b> logs, LEDs, reboot/factory reset behaviour, error messages.</li>
+  </ul>
+
+  <h3>Example Customer Scenarios</h3>
+  <ul>
+    <li>Family home: parents working from home + kids streaming/gaming on Wi-Fi.</li>
+    <li>Guest network usage with restricted access.</li>
+    <li>Parental control with scheduled internet cut-off (bedtime rules).</li>
+    <li>Blocking specific devices and verifying that traffic is actually blocked.</li>
+  </ul>
+
+  <h3>Wi-Fi & Performance Testing</h3>
+  <ul>
+    <li>Measured Wi-Fi throughput on 2.4 GHz and 5 GHz using iPerf and IxChariot.</li>
+    <li>Validated channel selection and impact of interference (neighbour networks).</li>
+    <li>Ran long-duration stability tests (overnight sessions under load).</li>
+    <li>Verified roaming behaviour when moving between rooms.</li>
+  </ul>
+
+  <h3>Diagnostics & System Validation</h3>
+  <ul>
+    <li>Checked system logs for errors or warnings after stressful test runs.</li>
+    <li>Verified LED behaviour (internet down, Wi-Fi off, WPS active, etc.).</li>
+    <li>Tested reboot and factory reset flows, including impact on saved settings.</li>
+    <li>Ensured that UI messages are clear and aligned with the real device status.</li>
+  </ul>
+
+  <h3>Tools & Technologies</h3>
+  <ul>
+    <li>DOCSIS / GPON</li>
+    <li>Wireshark, iPerf, IxChariot</li>
+    <li>Router Web UI, TR-069, logs</li>
+  </ul>
+
+  <h3>Impact</h3>
+  <p>
+    By focusing on realistic customer scenarios and Wi-Fi performance, we caught several
+    issues before deployment (Wi-Fi instability after long uptime, incorrect parental control
+    behaviour). This reduced field incidents and improved customer satisfaction.
+  </p>
+</div>
+
+</body>
+</html>
