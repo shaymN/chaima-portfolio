@@ -1,84 +1,58 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Chaima Melki – QA Test Engineer Portfolio</title>
-<style>
-    body {font-family: Arial; margin: 0; padding: 0; background: #f5f7fb; color: #333;}
-    .header {background: #1A3C6E; color: white; padding: 40px; text-align: center;}
-    .section {padding: 30px; margin: 20px; background: white; border-radius: 10px;}
-    h2 {color: #1A3C6E;}
-    ul {line-height: 1.8;}
-</style>
+<title>Interactive QA Portfolio – Chaima Melki</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
 
-<div class="header">
-    <h1>Chaima MELKI</h1>
-    <h3>QA Test Engineer – Telecom | CPE | DOCSIS | Web UI</h3>
-    <p><b>Email:</b> shaym.melki@gmail.com | 
-       <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/chaima-melki" style="color:#9bd1ff;">chaima-melki</a></p>
-</div>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="experience.html">Experience</a>
+  <a href="projects.html">Projects</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-<div class="section">
-    <h2>Test Approach</h2>
+<section class="section fade-up">
+  <h2><span class="icon">🧪</span> Interactive QA Portfolio</h2>
+  <p class="muted">A sample of how I design test cases, report bugs, validate APIs and automate scenarios.</p>
+
+  <details open>
+    <summary><b>Test Cases</b> – Wi-Fi & WAN</summary>
     <ul>
-        <li>Understanding requirements, risks, and expected behaviour.</li>
-        <li>Combining exploratory and structured test design.</li>
-        <li>Log analysis, Wi-Fi analysis, protocol debugging.</li>
-        <li>Strong communication with developers & POs.</li>
+      <li>Wi-Fi 2.4/5 GHz toggle – verify SSID visibility and connectivity after enabling/disabling.</li>
+      <li>WAN reconnect – unplug/replug WAN and ensure status, IP and DNS update correctly.</li>
     </ul>
-</div>
+  </details>
 
-<div class="section">
-    <h2>Tools & Environment</h2>
+  <details>
+    <summary><b>Bug Reports</b> – CPE Issues</summary>
     <ul>
-        <li>Jira, XRay, TestLink, Bugzilla</li>
-        <li>Postman, SOAPUI</li>
-        <li>Wireshark, IxNetwork, IxChariot, iPerf</li>
-        <li>Telecom: DOCSIS, GPON, TR069, TCP/IP</li>
-        <li>Linux, Python, Shell Script</li>
+      <li>SSID rename not applied (5 GHz) – UI success but old SSID still broadcasted.</li>
+      <li>LAN port speed mismatch – device negotiates 1 Gbps but UI shows 100 Mbps.</li>
     </ul>
-</div>
+  </details>
 
-<div class="section">
-    <h2>Sample Test Cases</h2>
-    <p><b>TC_WIFI_001 – Wi-Fi 2.4GHz Enable/Disable</b></p>
-    <ul>
-        <li>Verify SSID visibility after toggling Wi-Fi.</li>
-        <li>Validate configuration saved correctly.</li>
-    </ul>
+  <details>
+    <summary><b>TR-069 API Samples</b></summary>
+    <pre>GetParameterValues: Device.WiFi.SSID.1.SSID
+SetParameterValues: Change Wi-Fi password via ACS and confirm reconnect behaviour.</pre>
+  </details>
 
-    <p><b>TC_INTERNET_003 – WAN Status Update</b></p>
-    <ul>
-        <li>Validate correct Connected/Disconnected state with real WAN changes.</li>
-    </ul>
-</div>
-
-<div class="section">
-    <h2>Bug Reports</h2>
-    <p><b>BUG_WIFI_017 – SSID not updated after rename (5GHz)</b></p>
-    <p><b>BUG_LAN_022 – LAN Port 2 shows incorrect speed</b></p>
-</div>
-
-<div class="section">
-    <h2>API Testing (TR-069)</h2>
-    <pre>
-    GetParameterValues → Device.WiFi.SSID.1.SSID
-    Expected: Correct SSID, valid XML, <2s response
-    </pre>
-</div>
-
-<div class="section">
-    <h2>Automation Sample (Selenium)</h2>
-    <pre>
-@Test
+  <details>
+    <summary><b>Automation Sample</b></summary>
+    <pre>@Test
 public void testRouterLogin() {
-    driver.get("192.168.0.1");
-    ...
-}
-    </pre>
-</div>
+    driver.get("http://192.168.0.1");
+    // username, password, login and assert dashboard
+}</pre>
+  </details>
+</section>
 
 </body>
 </html>
