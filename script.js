@@ -1,6 +1,5 @@
 
 (function() {
-  // Theme toggle
   const body = document.body;
   const stored = localStorage.getItem('chaima-theme');
   if (stored === 'dark') {
